@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd" key="settings.xml">
+    <entry key="node_file" type="xstring" value="settings.xml"/>
+    <config key="flow_stack"/>
+    <config key="internal_node_subsettings">
+        <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
+    </config>
+    <config key="model">
+        <entry key="script" type="xstring" value="import knime.scripting.io as knio%%00010import pandas as pd%%00010%%00010# Transform the input table to a pandas DataFrame%%00010df = knio.input_tables[0].to_pandas()%%00010%%00010new_rows = []%%00010%%00010num_rows = df.shape[0]%%00010%%00010for index in range(num_rows):%%00010    row = df.iloc[index].copy()%%00010    column_names = row.index.tolist()%%00010    len_columns = len(row)%%00010    column_index = 0%%00010    while column_index &lt; len(row):%%00010        column_names = row.index.tolist()%%00010        if 'Cluster' in column_names[column_index]:%%00010            if row[column_index] == 1:%%00010                row = row.rename({column_names[column_index]: &quot;cluster&quot;})%%00010                row[&quot;cluster&quot;] = column_names[column_index]%%00010                column_index = len(row)%%00010            elif 'Winner Cluster' in column_names[column_index]:%%00010                pass%%00010            else:%%00010                row = row.drop(column_names[column_index])%%00010                column_index = column_index - 1%%00010        column_index = column_index + 1%%00010    new_rows.append(row)%%00010%%00010# Convert the list of rows back to a DataFrame%%00010df = pd.DataFrame(new_rows)%%00010%%00010# Ensure the DataFrame has a unique index%%00010df = df.reset_index(drop=True)%%00010%%00010# Drop all columns that contain &quot;Cluster&quot; in the name and the value is 0%%00010df = df.loc[:, ~((df.columns.str.contains('Cluster')))]%%00010%%00010# Drop all rows with a missing value%%00010df = df.dropna()%%00010%%00010# Output the DataFrame as a KNIME table%%00010knio.output_tables[0] = knio.Table.from_pandas(df)"/>
+        <entry key="python3_command" type="xstring" value=""/>
+    </config>
+    <config key="variables">
+        <entry key="version" type="xstring" value="V_2019_09_13"/>
+        <config key="tree">
+            <config key="python3_command">
+                <entry key="used_variable" type="xstring" value=""/>
+                <entry key="used_variable_flawed" type="xboolean" value="false"/>
+                <entry key="exposed_variable" type="xstring" isnull="true" value=""/>
+            </config>
+        </config>
+    </config>
+    <entry key="customDescription" type="xstring" isnull="true" value=""/>
+    <entry key="state" type="xstring" value="IDLE"/>
+    <entry key="factory" type="xstring" value="org.knime.python3.scripting.nodes2.script.PythonScriptNodeFactory"/>
+    <entry key="node-name" type="xstring" value="Python Script"/>
+    <entry key="node-bundle-name" type="xstring" value="KNIME Python 3 - Scripting Nodes"/>
+    <entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.python3.scripting.nodes"/>
+    <entry key="node-bundle-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-bundle-version" type="xstring" value="5.2.3.v202403221416"/>
+    <entry key="node-feature-name" type="xstring" value="KNIME Python Integration"/>
+    <entry key="node-feature-symbolic-name" type="xstring" value="org.knime.features.python3.scripting.feature.group"/>
+    <entry key="node-feature-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-feature-version" type="xstring" value="5.2.3.v202403221416"/>
+    <config key="factory_settings"/>
+    <config key="node_creation_config">
+        <config key="Input object (pickled)"/>
+        <config key="Input table">
+            <config key="port_0">
+                <entry key="object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
+            </config>
+        </config>
+        <config key="Output table">
+            <config key="port_0">
+                <entry key="object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
+            </config>
+        </config>
+        <config key="Output image"/>
+        <config key="Output object (pickled)"/>
+    </config>
+    <entry key="name" type="xstring" value="Python Script"/>
+    <entry key="hasContent" type="xboolean" value="false"/>
+    <entry key="isInactive" type="xboolean" value="false"/>
+    <config key="ports">
+        <config key="port_1">
+            <entry key="index" type="xint" value="1"/>
+            <entry key="port_dir_location" type="xstring" isnull="true" value=""/>
+        </config>
+    </config>
+    <config key="filestores">
+        <entry key="file_store_location" type="xstring" isnull="true" value=""/>
+        <entry key="file_store_id" type="xstring" isnull="true" value=""/>
+    </config>
+</config>
