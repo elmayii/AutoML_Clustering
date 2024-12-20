@@ -1,0 +1,7 @@
+{
+    "seed-61": {
+        "label": "Seed for shuffling data and Hillclimbing starting k:",
+        "type": "integer",
+        "default": 123456789
+    }
+}

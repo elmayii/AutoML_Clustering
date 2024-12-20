@@ -1,0 +1,20 @@
+{
+    "seed-61": {
+        "@class": "org.knime.js.base.node.configuration.input.integer.IntegerDialogNodeRepresentation",
+        "label": "Seed for shuffling data and Hillclimbing starting k:",
+        "description": "Shuffling data prevents bad initialization of cluster centers in case of ordered data. Hillclimbing starting k highly influences which local optimum will be found.\nChange this value to make sure your results are not depending on the shuffled order of the rows or on the starting k of the Hillclimbing strategy.",
+        "required": true,
+        "defaultValue": {
+            "@class": "org.knime.js.base.node.configuration.input.integer.IntegerDialogNodeValue",
+            "integer": 123456789
+        },
+        "currentValue": {
+            "@class": "org.knime.js.base.node.configuration.input.integer.IntegerDialogNodeValue",
+            "integer": 123456789
+        },
+        "usemin": false,
+        "usemax": false,
+        "min": 0,
+        "max": 100
+    }
+}

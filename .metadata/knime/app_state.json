@@ -1,0 +1,20 @@
+{
+  "version" : "5.2.1.v202401291517",
+  "projects" : [ {
+    "name" : "DBSCAN(CAAK)",
+    "active" : false,
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "relativePath" : "Alg\\DBSCAN(CAAK)"
+    }
+  }, {
+    "name" : "K-Means(CAAK)",
+    "active" : true,
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "relativePath" : "Alg\\K-Means(CAAK)"
+    }
+  } ]
+}

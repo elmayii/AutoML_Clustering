@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd" key="settings.xml">
+    <entry key="node_file" type="xstring" value="settings.xml"/>
+    <config key="flow_stack"/>
+    <config key="internal_node_subsettings">
+        <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
+    </config>
+    <config key="model">
+        <config key="column-filter-48">
+            <config key="columns">
+                <entry key="array-size" type="xint" value="14"/>
+                <entry key="0" type="xstring" value="Administrative"/>
+                <entry key="1" type="xstring" value="Administrative_Duration"/>
+                <entry key="2" type="xstring" value="Informational"/>
+                <entry key="3" type="xstring" value="Informational_Duration"/>
+                <entry key="4" type="xstring" value="ProductRelated"/>
+                <entry key="5" type="xstring" value="ProductRelated_Duration"/>
+                <entry key="6" type="xstring" value="BounceRates"/>
+                <entry key="7" type="xstring" value="ExitRates"/>
+                <entry key="8" type="xstring" value="PageValues"/>
+                <entry key="9" type="xstring" value="SpecialDay"/>
+                <entry key="10" type="xstring" value="OperatingSystems"/>
+                <entry key="11" type="xstring" value="Browser"/>
+                <entry key="12" type="xstring" value="Region"/>
+                <entry key="13" type="xstring" value="TrafficType"/>
+            </config>
+            <config key="columnFilter">
+                <config key="columnFilter">
+                    <entry key="filter-type" type="xstring" value="STANDARD"/>
+                    <config key="included_names">
+                        <entry key="array-size" type="xint" value="14"/>
+                        <entry key="0" type="xstring" value="Administrative"/>
+                        <entry key="1" type="xstring" value="Administrative_Duration"/>
+                        <entry key="2" type="xstring" value="Informational"/>
+                        <entry key="3" type="xstring" value="Informational_Duration"/>
+                        <entry key="4" type="xstring" value="ProductRelated"/>
+                        <entry key="5" type="xstring" value="ProductRelated_Duration"/>
+                        <entry key="6" type="xstring" value="BounceRates"/>
+                        <entry key="7" type="xstring" value="ExitRates"/>
+                        <entry key="8" type="xstring" value="PageValues"/>
+                        <entry key="9" type="xstring" value="SpecialDay"/>
+                        <entry key="10" type="xstring" value="OperatingSystems"/>
+                        <entry key="11" type="xstring" value="Browser"/>
+                        <entry key="12" type="xstring" value="Region"/>
+                        <entry key="13" type="xstring" value="TrafficType"/>
+                    </config>
+                    <config key="excluded_names">
+                        <entry key="array-size" type="xint" value="0"/>
+                    </config>
+                    <entry key="enforce_option" type="xstring" value="EnforceExclusion"/>
+                    <config key="name_pattern">
+                        <entry key="pattern" type="xstring" value=""/>
+                        <entry key="type" type="xstring" value="Wildcard"/>
+                        <entry key="caseSensitive" type="xboolean" value="true"/>
+                        <entry key="excludeMatching" type="xboolean" value="false"/>
+                    </config>
+                    <config key="datatype">
+                        <config key="typelist">
+                            <entry key="org.knime.core.data.DoubleValue" type="xboolean" value="false"/>
+                            <entry key="org.knime.core.data.BooleanValue" type="xboolean" value="false"/>
+                            <entry key="org.knime.core.data.IntValue" type="xboolean" value="false"/>
+                            <entry key="org.knime.core.data.LongValue" type="xboolean" value="false"/>
+                            <entry key="org.knime.core.data.StringValue" type="xboolean" value="false"/>
+                            <entry key="org.knime.core.data.date.DateAndTimeValue" type="xboolean" value="false"/>
+                        </config>
+                    </config>
+                </config>
+            </config>
+        </config>
+        <config key="seed-61">
+            <entry key="integer" type="xint" value="123456789"/>
+        </config>
+        <config key="optimizationStrategy-62">
+            <config key="variable_value">
+                <entry key="array-size" type="xint" value="1"/>
+                <entry key="0" type="xstring" value="BruteForce"/>
+            </config>
+        </config>
+        <config key="EpsilonNum-134">
+            <entry key="integer" type="xint" value="2"/>
+        </config>
+        <config key="epsilonStepSize-141">
+            <entry key="double" type="xdouble" value="0.1"/>
+        </config>
+        <config key="epsilonStart-142">
+            <entry key="double" type="xdouble" value="0.1"/>
+        </config>
+    </config>
+    <config key="nodeAnnotation">
+        <entry key="text" type="xstring" value=""/>
+        <entry key="contentType" type="xstring" value="text/plain"/>
+        <entry key="bgcolor" type="xint" value="16777215"/>
+        <entry key="x-coordinate" type="xint" value="0"/>
+        <entry key="y-coordinate" type="xint" value="0"/>
+        <entry key="width" type="xint" value="0"/>
+        <entry key="height" type="xint" value="0"/>
+        <entry key="alignment" type="xstring" value="CENTER"/>
+        <entry key="borderSize" type="xint" value="0"/>
+        <entry key="borderColor" type="xint" value="0"/>
+        <entry key="defFontSize" type="xint" value="-1"/>
+        <entry key="annotation-version" type="xint" value="20230412"/>
+        <config key="styles"/>
+    </config>
+    <entry key="customDescription" type="xstring" isnull="true" value=""/>
+    <entry key="state" type="xstring" value="IDLE"/>
+    <entry key="workflow-file" type="xstring" value="workflow.knime"/>
+    <entry key="virtual-in-ID" type="xint" value="137"/>
+    <config key="inports">
+        <config key="inport_0">
+            <entry key="index" type="xint" value="0"/>
+            <config key="type">
+                <entry key="object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
+            </config>
+        </config>
+    </config>
+    <entry key="virtual-out-ID" type="xint" value="149"/>
+    <config key="outports">
+        <config key="outport_0">
+            <entry key="index" type="xint" value="0"/>
+            <config key="type">
+                <entry key="object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
+            </config>
+        </config>
+        <config key="outport_1">
+            <entry key="index" type="xint" value="1"/>
+            <config key="type">
+                <entry key="object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
+            </config>
+        </config>
+        <config key="outport_2">
+            <entry key="index" type="xint" value="2"/>
+            <config key="type">
+                <entry key="object_class" type="xstring" value="org.knime.core.node.port.PortObject"/>
+            </config>
+        </config>
+    </config>
+    <entry key="layoutJSON" type="xstring" value="{&quot;parentLayoutLegacyMode&quot;:false}"/>
+    <entry key="configurationLayoutJSON" type="xstring" value="{}"/>
+    <entry key="hideInWizard" type="xboolean" value="false"/>
+    <entry key="customCSS" type="xstring" value=""/>
+</config>
